@@ -1,0 +1,33 @@
+.floating-icons {
+	position: fixed;
+	right: 20px;
+	bottom: 50px;
+	z-index: 10;
+}
+
+.floating-icons > span {
+	background: #71AE4D;
+	height: 50px;
+	width: 50px;
+	border-radius: 15px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	transition: transform 0.3s ease;
+	z-index: 3;
+	margin: 10px 0;
+}
+
+.floating-icons span svg {
+	color: #fff !important;
+	/* height: 70%;
+    width: 70%; */
+}
+
+@media (max-width: 500px) {
+	.floating-icons span {
+		width: 55px;
+		height: 55px;
+	}
+}

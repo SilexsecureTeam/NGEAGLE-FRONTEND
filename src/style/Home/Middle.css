@@ -1,0 +1,80 @@
+.muni {
+	background-color: #10172b;
+	border-bottom-width: 20px;
+	position: relative;
+	color: rgba(255, 255, 255, 0.8);
+}
+
+.munii {
+	background-color: #71AE4D;
+	border-bottom-width: 20px;
+	position: relative;
+}
+
+.greater-than-sign {
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+}
+
+.underline-para {
+	border-bottom: 3px solid #71AE4D;
+	padding-bottom: 8px;
+	/* display: inline; */
+}
+
+.underline-para {
+	border-bottom: 3px solid #71AE4D;
+	/* display: inline; */
+}
+
+.underline-par {
+	border-bottom: 3px solid #71AE4D;
+	display: inline;
+}
+
+.greater-than-sign {
+	background-color: #71AE4D;
+	width: 50px;
+	padding-bottom: 3px;
+	text-align: center;
+	font-size: 20px;
+	align-items: right;
+}
+
+/* .greater-than-sig {
+    background-color: #71AE4D;
+    width: 50px;
+    padding-bottom: 3px;
+    text-align: center;
+    font-size: 20px;
+    align-items: right;
+} */
+
+.greater-than-sign:hover {
+	background-color: #c5cac6;
+	cursor: pointer;
+}
+
+/* .greater-than-sig:hover {
+    background-color: #C5CAC6;
+    cursor: pointer;
+} */
+
+.greater-than-sig {
+	background-color: #c5cac6;
+	cursor: pointer;
+}
+
+.greater-than-sig:hover {
+	background-color: #10172b;
+}
+
+.inp::placeholder {
+	color: white;
+	font-weight: 600;
+}
+
+.middle-icon{
+	width: 100% !important;
+}

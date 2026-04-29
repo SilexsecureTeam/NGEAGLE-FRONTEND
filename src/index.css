@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;1,100;1,200&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+.skiptranslate.goog-te-gadget {
+  display: none !important;
+}
+
+.skiptranslate.goog-te-gadget:first-child {
+  margin-right: auto;
+  display: flex !important;
+  justify-content: flex-end;
+}
+
+.skiptranslate.goog-te-gadget {
+  color: #fff !important;
+}
+
+.skiptranslate.goog-te-gadget span {
+  display: none;
+}
+
+body > .skiptranslate {
+  display: none !important;
+}
+
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+
+#google_translate_element {
+  display: none !important;
+}
+
+main {
+  top: 0px !important;
+}
+
+#input_align {
+  display: inline;
+  width: unset !important;
+}
+
+/* body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+} */
+
+.navy_blue {
+  background-color: hsla(224, 46%, 12%, 1) !important;
+}
+
+.green_text {
+  color: hsla(101, 40%, 48%, 1) !important;
+}
+
+.green_bg {
+  background-color: hsla(101, 40%, 48%, 1) !important;
+}
+.green_border {
+  border: 1px solid hsla(101, 40%, 48%, 1) !important;
+}
+
+.green_bottom {
+  border-bottom: 1px solid hsla(101, 40%, 48%, 1) !important;
+}
+.pointer {
+  cursor: pointer !important;
+}
+
+.bg_cover {
+  height: 180vh !important;
+}
+
+.corporate_bg {
+  background-image: url("./images/corporate-image.png");
+  min-height: 70vh;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.travels_bg {
+  background-image: url("./images/travel_img.png");
+  min-height: 70vh;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+
+@media (max-width: 768px) {
+  .bg_cover{
+    height: 300vh !important;
+  }
+}

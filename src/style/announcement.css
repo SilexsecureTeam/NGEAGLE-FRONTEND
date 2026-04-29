@@ -1,0 +1,104 @@
+.announcement {
+	background-color: #71AE4D;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+}
+
+@media(max-width: 1160px){
+	.announcement{
+		display: block;
+		flex-direction: unset;
+	}
+}
+
+.hhBasdddxxss{
+	background-color: #71AE4D;
+	color: #fff;
+	text-align: center !important;
+	align-items: center;
+}
+
+@media(max-width: 600px){
+	.removeOnMobile{
+		display: none !important;
+	}
+	.hhBasdddxxss{
+		background-color: #ffffff;
+		color: #000;
+		font-size: 12px;
+		padding: 20px;
+	}
+}
+
+.mySwiper {
+	width: 100% !important;
+	/* border: 2px solid #000; */
+	/* padding-left: 20px !important; */
+}
+
+.mySwiperInn{
+	width: 150px !important;
+}
+
+.swiper-slide {
+	margin: 5px 0;
+	font-size: 18px;
+	display: flex;
+}
+
+@media(max-width: 600px){
+	.swiper-slide{
+		font-size: 12px !important;
+	}
+}
+
+.swiper-slide > p {
+	margin-bottom: 0;
+}
+
+.announcement ul {
+	list-style: none;
+	display: flex;
+	gap: 20px;
+	margin-bottom: 0;
+	padding: 0;
+	/* border: 2px solid yellow; */
+}
+
+.linkAndCloseButtonContainer {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+	border-top: 1px solid #ffffff7d;
+	padding: 0 20px;
+}
+
+.closeButtonContainer {
+	cursor: pointer;
+}
+
+.closeButtonContainer > svg {
+	font-size: 40px;
+}
+
+@media (min-width: 640px) {
+	.announcement {
+		padding: 0 10px;
+		position: relative;
+		flex-direction: row;
+		z-index: 1;
+		/* border: 2px solid #000; */
+	}
+	.mySwiper {
+		width: 60% !important;
+		text-align: center;
+	}
+
+	.linkAndCloseButtonContainer {
+		border-top: 0px;
+	}
+}

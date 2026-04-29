@@ -1,0 +1,107 @@
+.middle-image {
+  /* background-color: rgb(190, 186, 186); */
+  align-items: center;
+}
+
+@media (min-width: 992px) {
+  .inner-cl {
+    margin-left: -140px;
+    margin-top: -180px;
+  }
+}
+@media (min-width: 992px) {
+  .circle-part {
+    z-index: 1;
+    margin-bottom: -130px;
+  }
+}
+@media (min-width: 992px) {
+  .curved-image {
+    margin-left: 100px;
+  }
+}
+@media (min-width: 992px) {
+  .mt {
+    padding-top: 30px;
+  }
+}
+
+.middle-imag {
+  /* background-color: rgb(190, 186, 186); */
+  align-items: center;
+}
+.border-imag {
+  margin-top: -20px;
+  margin-bottom: 60px;
+  height: 100px;
+  width: 100%;
+}
+
+.circle-part {
+  width: 140px;
+  height: 140px;
+  border: 5px solid rgb(105, 171, 74);
+  border-radius: 50%;
+  text-align: center;
+  padding-top: 35px;
+  font-size: 15px;
+  background-color: rgb(217, 217, 217);
+  margin-bottom: -200px;
+}
+
+.relate {
+  font-size: 20px;
+}
+
+.wealth {
+  color: rgb(105, 171, 74);
+}
+
+.about-business {
+  color: white;
+}
+.about-and-career {
+  line-height: 12px;
+}
+.about-busine p:hover {
+  color: black;
+  cursor: pointer;
+}
+
+.about-business {
+  margin-top: -49px;
+  background-color: rgb(105, 171, 74);
+}
+.curved-image {
+  border-radius: 84% 83% 79% 83% / 93% 94% 91% 90%;
+  width: 500px;
+}
+.about:hover {
+  text-decoration: underline;
+  color: black;
+  cursor: pointer;
+}
+.careers:hover {
+  text-decoration: underline;
+  color: black;
+  cursor: pointer;
+}
+.Newss:hover {
+  text-decoration: underline;
+  color: black;
+  cursor: pointer;
+}
+.ui-part {
+  font-size: 14px;
+}
+.mt {
+  margin-top: 60px;
+}
+.ppplane {
+  width: 100%;
+  object-fit: contain;
+  overflow: hidden;
+}
+.para-sections{
+  line-height: 20px;
+}

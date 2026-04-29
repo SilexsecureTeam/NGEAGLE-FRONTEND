@@ -1,0 +1,46 @@
+.badsfertm {
+    width: fit-content;
+	height: fit-content !important;
+    overflow: scroll;
+}
+
+.mtrtyu5{
+    margin-top: 100px;
+}
+
+@media(max-width:600px){
+    .mtrtyu5{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+.banMidlle{
+    height: 500px;
+}
+
+.movinUpuytg{
+    margin-top: -200px;
+    height: fit-content;
+}
+
+.dflexworlas{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.hjryqrweuj{
+    height: 400px;
+}
+
+@media(max-width:600px){
+    .hjryqrweuj{
+        height: 100%;
+    }
+
+    .dflexworlas{
+        display: block;
+    }
+}
+  

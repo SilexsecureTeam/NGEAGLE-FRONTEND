@@ -1,0 +1,101 @@
+.nav-sidd {
+	background-color: #10172b;
+}
+.first-im {
+	width: 100%;
+}
+.about-and-brand {
+	color: white;
+	padding-top: 70px;
+	padding-bottom: 70px;
+}
+.contai {
+	background-color: #10172b;
+}
+.welcome:hover {
+	cursor: pointer;
+	text-decoration: underline;
+}
+.careers:hover {
+	cursor: pointer;
+	text-decoration: underline;
+}
+.abou:hover {
+	cursor: pointer;
+	text-decoration: underline;
+}
+.caree-about-si {
+	line-height: 12px;
+	margin-top: 70px;
+}
+.brand-eco {
+	font-size: 30px;
+}
+
+@media (max-width: 768px) {
+	.brand-eco {
+		font-size: 20px;
+	}
+}
+.turist-attractions-abuja {
+	background-color: rgb(16, 23, 43);
+	color: white;
+	margin-top: 50px;
+}
+.nu {
+	font-size: 14px;
+	padding-right: 10px;
+}
+.MELLENIUM-PARK {
+	background-color: rgb(43, 67, 52);
+	padding: 4px;
+	font-size: 28px;
+}
+.tur {
+	font-size: 18px;
+}
+.luxry-main-par {
+	background-image: url("../images/1000w_q95 1.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.LUXURY-TRAVEL-EXPERIENC {
+	background-color: rgba(255, 255, 255, 0.7);
+	margin-top: 100px;
+	margin-bottom: 50px;
+}
+.book-nao {
+	background-color: black;
+	width: 150px;
+	text-align: center;
+	color: white;
+}
+.image-rela {
+	position: relative;
+}
+.spe {
+	position: absolute;
+	top: 0px;
+	right: 10px;
+}
+.greater-than {
+	transform: rotate(90deg);
+	background-color: #71AE4D;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	color: white;
+	padding-top: 5px;
+	/* position: absolute; */
+}
+.less-than {
+	transform: rotate(90deg);
+	background-color: #71AE4D;
+	width: 40px;
+	height: 40px;
+	margin-top: -10px;
+	text-align: center;
+	color: white;
+	padding-top: 5px;
+	/* position: absolute; */
+}

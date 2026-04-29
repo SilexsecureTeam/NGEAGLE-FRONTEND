@@ -1,0 +1,32 @@
+.Turist {
+	background-color: #10172b;
+}
+.main-part-terms-condition {
+	background-color: #71AE4D;
+	margin-bottom: -8px;
+}
+.terms {
+	font-size: 70px;
+}
+.condition {
+	font-size: 23px;
+}
+.main-part-terms-cond {
+	padding-top: 60px;
+	line-height: 40px;
+	padding-bottom: 50px;
+}
+.botto {
+	width: 100%;
+	height: 90px;
+}
+.a-brand-ecosystem {
+	font-size: 16px !important;
+}
+.a-brand-description {
+	font-size: 30px !important;
+	font-weight: 700 !important;
+}
+.a-brand-ecosystem {
+	font-size: 30px;
+}

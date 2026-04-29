@@ -1,0 +1,104 @@
+.third-main-part {
+	background-color: #10172b;
+	color: #71AE4D;
+	height: auto;
+	padding-top: 100px;
+}
+
+.greater-than {
+	transform: rotate(90deg);
+	background-color: #71AE4D;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	color: white;
+	padding-top: 5px;
+	/* position: absolute; */
+}
+
+.catSelectoreee{
+	cursor: pointer !important;
+}
+
+.textWhiteReal{
+	color: #ffffff !important;
+}
+
+.less-than {
+	transform: rotate(90deg);
+	background-color: #71AE4D;
+	width: 40px;
+	height: 40px;
+	margin-top: -10px;
+	text-align: center;
+	color: white;
+	padding-top: 5px;
+	/* position: absolute; */
+}
+.bg-grond {
+	width: 100%;
+}
+.third-main-part span {
+	font-size: 10px;
+	padding-top: 5px;
+	padding-right: 5px;
+}
+.d {
+	color: #71AE4D;
+}
+.deal-and-offer {
+	position: absolute;
+	background-color: #c5cac6;
+	top: -110px;
+	right: 10px;
+	width: 125px;
+	height: 40px;
+}
+.d:hover {
+	color: white;
+	cursor: auto;
+}
+.book-naow {
+	background-color: black;
+	width: 150px;
+	text-align: center;
+	color: white;
+}
+.luxry-main-part {
+	background-image: url("../../images/1000w_q95 1.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: grid;
+	place-content: center;
+}
+.LUXURY-TRAVEL-EXPERIENCE {
+	background-color: rgba(255, 255, 255, 0.7);
+	height: fit-content;
+	max-width: 500px;
+	/* margin-top: 100px;
+  margin-bottom: 50px; */
+}
+.LUXURY-TRAVEL-EXPERIENCE b {
+	border-bottom: 2px solid #71AE4D;
+}
+.speci {
+	position: absolute;
+	top: 40px;
+	right: 0px;
+}
+.sign-relativ {
+	position: relative;
+}
+.my-relat {
+	position: relative;
+	padding-top: 60px;
+}
+@media screen and (min-width: 768px) {
+	.sign-relativ {
+	}
+}
+
+/* }
+.image{
+width: 500px;
+} */

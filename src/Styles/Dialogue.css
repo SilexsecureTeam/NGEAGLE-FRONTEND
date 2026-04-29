@@ -1,0 +1,81 @@
+.fourth-off {
+	color: #448128;
+}
+.Trip-with-Ngeagle {
+	/* font-size: 13px; */
+}
+.hand-holding-phone {
+	width: 250px;
+	margin-right: 0px;
+	margin-top: 30px;
+}
+.toggle-button {
+	width: 170px;
+	height: 50px;
+}
+.dialog-box {
+	align-items: center;
+	/*height: 250px; */
+	margin: 0px;
+}
+.no-thanks {
+	text-decoration: underline;
+	color: black;
+	font-size: 15px;
+	padding-bottom: -30px;
+}
+.fly-now {
+	background-color: #71AE4D;
+	color: white;
+	border-bottom: none;
+	font-size: 17px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-radius: 5px;
+	text-decoration: none;
+}
+.fly-now:hover {
+	text-decoration: none;
+	background-color: black;
+	color: white;
+}
+.button-to-toggle:hover {
+	background-color: black;
+	color: white;
+	font: bolder;
+}
+.button-to-toggle {
+	text-decoration: none;
+	background-color: #71AE4D;
+	color: white;
+	font: bolder;
+}
+@media (max-width: 768px) {
+	.dialog-box-container {
+		margin: 80px;
+		align-items: center;
+	}
+}
+
+.dialog-box {
+	position: relative;
+}
+.close-button:hover {
+	cursor: pointer;
+}
+
+.relate-imag {
+	position: absolute;
+	right: 20px;
+	top: 10px;
+	width: 35px;
+}
+.close {
+	opacity: 0;
+	position: absolute;
+	right: 0px;
+	top: 10px;
+}
+.close:hover {
+	opacity: 1;
+}

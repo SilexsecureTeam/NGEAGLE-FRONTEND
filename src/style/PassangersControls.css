@@ -1,0 +1,71 @@
+/* Styled Passengers Controls */
+.styled-passengers-controls {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 50px;
+}
+
+.styled-passengers-controls p {
+	margin: 0;
+}
+
+.styled-passengers-controls div {
+	display: flex;
+	gap: 1.5em;
+	height: 100%;
+	align-items: center;
+}
+
+.styled-passengers-controls div span {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.styled-passengers-controls div svg {
+	transition: color 350ms ease;
+	cursor: pointer;
+}
+
+.styled-passengers-controls div svg:hover {
+	color: #71AE4D;
+}
+
+/* Passengers Controls Container */
+.pasangers-controls-container {
+	position: absolute;
+	top: 50px;
+	left: 0;
+	width: 300px;
+	min-height: 200px;
+	padding: 20px;
+	box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.15);
+	border-radius: 15px;
+	background: rgb(236, 238, 249);
+	display: none; /* Hidden by default */
+}
+
+.pasangers-controls-container.show {
+	display: block; /* Show when the 'show' prop is true */
+}
+
+/* Submit Button */
+.submit-button2 {
+	width: fit-content !important;
+	margin: 10px 0;
+	outline: none;
+	border: none;
+	border-radius: 10px;
+	background-color: #71AE4D;
+	color: #fff;
+	padding: 10px 30px;
+	transition: box-shadow 350ms ease;
+}
+
+.submit-button2:hover {
+	box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.15);
+}

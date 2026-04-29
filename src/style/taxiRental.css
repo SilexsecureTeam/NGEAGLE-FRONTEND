@@ -1,0 +1,121 @@
+.taxi-header {
+	background-color: #71AE4D33;
+	padding: 80px 50px;
+	padding-left: 250px;
+	height: 600px;
+}
+
+.car-header {
+	background: url("../images//car1\ 1.png") no-repeat;
+	background-position: right;
+	background-size: contain;
+	width: 100%;
+	height: 100%;
+}
+
+.car-header form {
+	background-color: #10172b;
+	display: grid;
+	gap: 30px;
+	padding: 30px;
+	max-width: 450px;
+	margin: auto 0;
+}
+
+.input-container {
+	display: flex;
+	align-items: center;
+}
+
+.car-header form .icon {
+	background-color: #71AE4D;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0 30px;
+	outline: 1px solid #71AE4D;
+	color: white;
+	max-width: 20%;
+}
+
+.input-container .rest {
+	flex: auto;
+	width: 100%;
+}
+
+.input-subcontainer {
+	display: flex;
+	width: 100%;
+}
+
+.input-subcontainer input {
+	width: 50%;
+}
+
+.car-header form button {
+	background-color: #71AE4D !important;
+	color: white !important;
+	padding: 15px 0 !important;
+}
+
+.car-header form input,
+.car-header form select {
+	border: none;
+	outline: 1px solid #71AE4D;
+	background-color: transparent;
+	color: white;
+	padding: 10px;
+	width: 100%;
+}
+
+.body-div {
+	display: grid;
+	justify-items: flex-start;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.body-div img {
+	object-fit: cover;
+	width: 100%;
+	height: 500px;
+}
+
+.grid-body {
+	text-align: justify;
+	display: grid;
+	padding: 10% 20%;
+	place-content: center;
+	height: 100%;
+	background-color: #10172b;
+	color: white;
+}
+
+.right .grid-body {
+	order: -1;
+	background-color: #71AE4D;
+}
+
+.grid-body img {
+	width: 80px;
+	height: 80px;
+}
+
+.grid-body button {
+	background-color: white !important;
+	color: #71AE4D !important;
+	border-radius: 0;
+	padding: 10px 20px;
+}
+
+@media (max-width: 768px) {
+	.taxi-header {
+		padding: 80px 50px;
+	}
+	.body-div {
+		grid-template-columns: 1fr;
+	}
+
+	.right .grid-body {
+		order: 0;
+	}
+}

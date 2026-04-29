@@ -1,0 +1,48 @@
+.register_card {
+	width: 100%;
+	max-width: 600px;
+	background-color: #fff;
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+	border-radius: 4px;
+	padding: 50px;
+	margin: 50px auto;
+}
+
+.register_card .register_title {
+	font-size: 1.5rem;
+	margin-bottom: 20px;
+}
+
+.register_card .grid_container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 10px;
+}
+
+.register_card .input {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+.register_card .fullwidth {
+	grid-column: span 2;
+}
+
+.register_card .button {
+	width: 100%;
+	padding: 10px;
+	background-color: #71AE4D;
+	color: #fff;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	margin: 2px 0;
+}
+
+@media (max-width: 768px) {
+	.register_card {
+		padding: 20px;
+	}
+}

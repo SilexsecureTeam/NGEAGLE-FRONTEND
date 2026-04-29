@@ -1,0 +1,589 @@
+/* New CSS */
+#styled-flight-booking {
+	/* border-radius: 0 0 5px 5px; */
+	/* margin-bottom: 20px; */
+	position: fixed;
+	z-index: 100;
+	width: 80%;
+	height: fit-content;
+	padding-bottom: 10px;
+	top: 400px !important;
+	left: 10%;
+	margin: 0 auto 50px;
+	display: flex;
+	flex-direction: column;
+	/* border: 2px solid red; */
+}
+
+#tabs-container {
+	height: 15%;
+	width: fit-content;
+	display: flex;
+	overflow-x: hidden;
+}
+
+/* Tabs */
+.tabs {
+	border: 0.2px solid rgba(79, 73, 73, 0.2);
+	flex: 1;
+	padding: 0 20px;
+	background-color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row !important;
+	gap: 0.6em;
+	cursor: pointer;
+	transition: color 0.3s linear;
+}
+
+.tabs:hover span {
+	color: #71AE4D;
+}
+
+.tabs svg {
+	height: 25px;
+	width: 25px;
+	color: #71AE4D;
+}
+
+.tabs span {
+	font-size: 16px;
+	font-weight: 600;
+	color: rgba(79, 73, 73, 1);
+	white-space: nowrap;
+}
+
+/* Active Tabs */
+.active-tabs {
+	background: #71AE4D;
+}
+
+.active-tabs svg {
+	color: #fff !important;
+}
+
+.active-tabs span {
+	color: #fff !important;
+}
+
+#tabs-container {
+	height: 46.69px;
+}
+
+/* Content Container */
+#content-container {
+	height: 80%;
+	display: flex;
+}
+
+/* Content */
+.content {
+	display: none;
+}
+
+/* Active Content */
+.active-content {
+	display: flex;
+	flex-direction: column;
+}
+
+.book-flight {
+	width: 100%;
+}
+
+/* Buttons Div */
+.buttons-div2 {
+	flex: 2;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	padding: 0 40px;
+	gap: 1em;
+}
+
+.buttons-div2 button {
+	border: 1px solid #71AE4D;
+	background: transparent;
+	border-radius: 15px;
+	padding: 3px 10px;
+	color: #71AE4D;
+	font-size: 14px;
+	font-weight: 500;
+	transition: background 400ms linear, color 400ms linear;
+}
+
+.buttons-div2 button:hover,
+.buttons-div2 .active {
+	background: #71AE4D;
+	color: #fff;
+}
+
+/* Inputs Div */
+.inputs-div {
+	flex: 3;
+	padding: 10px 40px;
+	display: flex;
+	gap: 1.5em;
+}
+
+/* Input Container */
+.input-container2 {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	padding: 5px 0;
+}
+
+.input-group {
+	display: flex;
+	height: 100%;
+	position: relative;
+	min-height: 40px;
+}
+
+.input-group span {
+	width: 20%;
+	border: 0.5px solid #d9d9d9;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.input-group input,
+.input-group select {
+	width: 80%;
+	background: transparent;
+	border: 0.5px solid #d9d9d9;
+	text-align: left;
+	outline-color: #71AE4D;
+	color: #000;
+	border-radius: 0px;
+	padding: 5px 10px 0;
+	margin: 0px !important;
+}
+
+.input-group input::-webkit-calendar-picker-indicator {
+	margin-right: 10px;
+}
+
+.submit-div {
+	flex: 3;
+	padding: 0 40px;
+	display: flex;
+	align-items: center;
+	gap: 2em;
+	min-height: 70px;
+}
+
+.promo {
+	flex: 1;
+	display: flex;
+	height: 100%;
+}
+
+.promo span {
+	width: 9%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 0.5px solid #d9d9d9;
+}
+
+.promo span svg {
+	color: rgba(0, 0, 0, 0.6);
+}
+
+.promo input {
+	width: 91%;
+	border: 0.5px solid #d9d9d9;
+	outline-color: #71AE4D;
+	padding: 0 10px;
+	border-radius: 0px;
+	text-align: left;
+}
+
+.submit-button {
+	flex: 1;
+	height: 100%;
+	border: none;
+	background: #71AE4D;
+	color: #fff;
+}
+
+.manage-booking-form {
+	display: flex;
+	flex-direction: column;
+	padding: 30px 20px 50px;
+	width: 100%;
+	/* border: 2px solid #000; */
+	background-color: #fff;
+	box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.2), 0 10px 25px 0 rgba(0, 0, 0, 0.19);
+}
+
+.manage-booking-form .bookingType {
+	display: flex;
+	gap: 3em;
+}
+
+.manage-booking-form .bookingType > label {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+
+	/* border: 2px solid #397239; */
+}
+
+.manage-booking-form .bookingType label input {
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	margin-right: 10px;
+	cursor: pointer;
+}
+/* 
+.manage-booking-form .bookingType div label {
+  cursor: pointer;
+} */
+
+@media (max-width: 830px) {
+	.manage-booking-form .bookingType {
+		flex-direction: column;
+		gap: 1em;
+	}
+}
+
+.manage-booking-form .bookingInputs {
+	margin: 20px 0;
+	display: flex;
+	align-items: center;
+	gap: 1em;
+}
+
+.manage-booking-form .bookingInputs .bookingInputsFields {
+	display: flex;
+	align-items: center;
+	flex: 1;
+	border-bottom: 2px solid grey;
+}
+
+.manage-booking-form .bookingInputs .bookingInputsFields input {
+	border: 0px;
+	outline: none;
+	padding: 5px 10px;
+}
+
+.manage-booking-form .bookingInputs .bookingInputsButton {
+	display: flex;
+	align-items: center;
+	flex: 2;
+	justify-content: flex-end;
+}
+
+.manage-booking-form .bookingInputs .bookingInputsButton button {
+	margin-right: 4vw;
+	padding: 5px 2.5vw;
+	border-radius: 5px;
+	outline: none;
+	border: 1px solid #71AE4D;
+	color: #71AE4D;
+	background: transparent;
+	font-size: clamp(0.85em, 0.9em, 2vw);
+	font-weight: 500;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+	transition: background 0.4s ease, color 0.4s ease;
+}
+
+.manage-booking-form .bookingInputs .bookingInputsButton button:hover {
+	background: #71AE4D;
+	color: #fff;
+}
+.form-container .bookingInputs {
+	margin: 20px 0;
+	display: flex;
+	align-items: center;
+	gap: 1em;
+}
+
+.form-container .bookingInputs .bookingInputsFields {
+	display: flex;
+	align-items: center;
+	flex: 1;
+	border-bottom: 2px solid grey;
+}
+
+.form-container .bookingInputs .bookingInputsFields input {
+	border: 0px;
+	outline: none;
+	padding: 5px 10px;
+}
+
+.form-container .bookingInputs .bookingInputsButton {
+	display: flex;
+	align-items: center;
+	flex: 2;
+	justify-content: flex-end;
+}
+
+.form-container .bookingInputs .bookingInputsButton button {
+	margin-right: 4vw;
+	padding: 5px 2.5vw;
+	border-radius: 5px;
+	outline: none;
+	border: 1px solid #71AE4D;
+	color: #71AE4D;
+	background: transparent;
+	font-size: clamp(0.85em, 0.9em, 2vw);
+	font-weight: 500;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+	transition: background 0.4s ease, color 0.4s ease;
+}
+
+.form-container .bookingInputs .bookingInputsButton button:hover {
+	background: #71AE4D;
+	color: #fff;
+}
+
+.form-container {
+	display: flex;
+	flex-direction: column;
+	padding: 30px 20px 50px;
+	width: 100%;
+}
+
+.form-container .bookingType {
+	display: flex;
+	gap: 3em;
+}
+
+.form-container .bookingType div {
+	display: flex;
+	align-items: center;
+}
+
+.form-container .bookingType div input {
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	margin-right: 10px;
+	cursor: pointer;
+}
+
+.form-container .bookingType div label {
+	cursor: pointer;
+}
+
+.online-checkin-container {
+	display: flex;
+	flex-direction: column;
+	padding: 30px 20px 50px;
+	width: 100%;
+	background-color: #fff;
+	box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.2), 0 10px 25px 0 rgba(0, 0, 0, 0.19);
+}
+
+.online-checkin-container .checkInHeader {
+	display: flex;
+}
+
+.online-checkin-container .checkInHeader h1 {
+	font-size: clamp(1em, 1.3em, 2vw);
+}
+
+.online-checkin-container .bookingInputs {
+	margin: 20px 0;
+	display: flex;
+	align-items: center;
+	gap: 1em;
+}
+
+.online-checkin-container .bookingInputs .bookingInputsFields {
+	display: flex;
+	align-items: center;
+	flex: 1;
+	border-bottom: 2px solid grey;
+}
+
+.online-checkin-container .bookingInputs .bookingInputsFields input {
+	border: 0px;
+	outline: none;
+	padding: 5px 10px;
+}
+
+.online-checkin-container .bookingInputs .bookingInputsButton {
+	display: flex;
+	align-items: center;
+	flex: 2;
+	justify-content: flex-end;
+}
+
+.online-checkin-container .bookingInputs .bookingInputsButton button {
+	margin-right: 4vw;
+	padding: 5px 2.5vw;
+	border-radius: 5px;
+	outline: none;
+	border: 1px solid #71AE4D;
+	color: #71AE4D;
+	background: transparent;
+	font-size: clamp(0.85em, 0.9em, 2vw);
+	font-weight: 500;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+	transition: background 0.4s ease, color 0.4s ease;
+}
+
+.online-checkin-container .bookingInputs .bookingInputsButton button:hover {
+	background: #71AE4D;
+	color: #fff;
+}
+
+.car-rental-container {
+	width: 100%;
+	text-align: center;
+}
+
+.car-rental-container h3 {
+	margin: auto;
+}
+
+.hotel-airbnb-container {
+	width: 100%;
+	text-align: center;
+}
+
+.hotel-airbnb-container h3 {
+	margin: auto;
+}
+
+@media (max-width: 500px) {
+	#styled-flight-booking {
+		width: 90%;
+		height: auto;
+	}
+	.buttons-div2 {
+		padding: 15px 10px 10px;
+		justify-content: center;
+	}
+	.submit-div {
+		padding: 0 20px;
+		flex-direction: column;
+		gap: 1em;
+		margin: 20px 0;
+	}
+	.manage-booking-form {
+		padding: 30px 20px 10px;
+	}
+	.manage-booking-form .bookingInputs {
+		flex-direction: column;
+		gap: 1em;
+	}
+
+	.manage-booking-form .bookingInputs .bookingInputsFields {
+		width: 100%;
+	}
+
+	.manage-booking-form .bookingInputs .bookingInputsButton {
+		margin-top: 20px;
+		width: 100%;
+		justify-content: center;
+	}
+
+	.manage-booking-form .bookingInputs .bookingInputsButton button {
+		width: 50%;
+	}
+	.form-container .bookingInputs {
+		flex-direction: column;
+		gap: 1em;
+	}
+
+	.form-container .bookingInputs .bookingInputsFields {
+		width: 100%;
+	}
+
+	.form-container .bookingInputs .bookingInputsButton {
+		margin-top: 20px;
+		width: 100%;
+		justify-content: center;
+	}
+
+	.form-container .bookingInputs .bookingInputsButton button {
+		width: 50%;
+	}
+	.form-container {
+		padding: 30px 20px 10px;
+	}
+	.online-checkin-container {
+		padding: 30px 20px 10px;
+	}
+
+	.online-checkin-container .bookingInputs {
+		flex-direction: column;
+	}
+
+	.online-checkin-container .bookingInputs .bookingInputsFields {
+		width: 100%;
+	}
+
+	.online-checkin-container .bookingInputs .bookingInputsButton {
+		width: 100%;
+		justify-content: center;
+		margin-top: 20px;
+	}
+
+	.online-checkin-container .bookingInputs .bookingInputsButton button {
+		width: 50%;
+	}
+
+	.car-rental-container {
+		min-height: 350px;
+	}
+
+	.hotel-airbnb-container {
+		min-height: 350px;
+	}
+}
+
+@media (max-width: 830px) {
+	.tabs span {
+		display: none;
+	}
+	.inputs-div {
+		padding: 0 20px;
+		flex-direction: column;
+		gap: 0.5em;
+	}
+	.input-container2 {
+		height: 100%;
+		/* border: 1px solid black; */
+		padding: 0;
+	}
+	.input-group {
+		height: 45px;
+		/* border: 1px solid black; */
+	}
+	.input-group select {
+		text-align: left;
+		-webkit-text-align: left; /* For Safari */
+		padding: 0 10px;
+
+		/* Hide the default arrow */
+		appearance: none;
+		-moz-appearance: none;
+		-webkit-appearance: none;
+	}
+	.promo {
+		width: 100%;
+		min-height: 35px;
+	}
+	.promo span {
+		width: 24%;
+	}
+	.submit-button {
+		width: 100%;
+		min-height: 35px;
+	}
+	.form-container .bookingType {
+		flex-direction: column;
+		gap: 1em;
+	}
+}

@@ -1,0 +1,328 @@
+.main-content {
+	/* border: 2px solid #000; */
+	background-color: #fff;
+	box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.2), 0 10px 25px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* Style the radio buttons for trip type */
+.form-check-inline {
+	margin-right: 15px;
+}
+.form-check-input {
+	background-color: #790030;
+	color: #790030;
+}
+.form-check-label {
+	background-color: #790030;
+	padding: 10px;
+	cursor: pointer;
+	border-radius: 7px;
+	text-align: center;
+	color: #ced4da;
+}
+.check_btn {
+	border: 1px solid #790030;
+}
+
+.check_btn:hover {
+	background-color: #790030;
+	color: #fff;
+}
+
+/* Style the select dropdowns */
+.custom-select {
+	border-radius: 5px;
+}
+
+/* Style the input fields */
+.form-control {
+	/* border: 1px solid rgba(0, 0, 0, 0.3); */
+	border: 1px solid #d9d9d9;
+	border-radius: 0.3rem;
+	margin-top: 0.2rem;
+	color: #000;
+}
+.input-group {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	/* border: 1px solid green; */
+	height: fit-content !important;
+}
+
+.reactInputGroupSelect {
+	height: 45px !important;
+	/* border: 2px solid red !important; */
+	grid-column: 2 / span 5;
+}
+
+.icon-text-design {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 45px;
+	width: 35px;
+	border: 1px solid #d9d9d9;
+	border-radius: 4px;
+	background-color: #fff !important;
+}
+
+.inputGroupText {
+	background-color: #fff !important;
+	border-right: 1px solid d9d9d9 !important;
+	width: 100% !important;
+	grid-column: 1 / span 1;
+	/* padding: 0 10px; */
+}
+.child-input-width {
+	width: 24%;
+	background-color: #000;
+}
+
+.label-text {
+	font-family: Colfax;
+	font-size: 11px;
+	font-weight: 500;
+	line-height: 16px;
+	letter-spacing: 0em;
+	text-align: left;
+	color: #464242;
+}
+
+.radio-buttons-width {
+	width: 50% !important;
+}
+
+/* styling for default input group container */
+.form-group-container {
+	border: 1px solid #ced4da;
+	border-radius: 8px;
+	background-color: #f8f9fa;
+	width: auto;
+	padding: 20px;
+	margin-bottom: 20px;
+}
+
+/* radio buttons label container */
+.radio-container {
+	font-size: 15px;
+	cursor: pointer;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: center;
+	gap: 0.2rem;
+	margin: 0px;
+	justify-content: start;
+	/* border: 1px solid red; */
+}
+
+/* radio buttons */
+.customFormCheck {
+	width: 20px;
+	height: 20px;
+}
+/* 
+.customFormCheck:focus {
+	outline: none;
+	border-color: #790030;
+	background-color: #790030;
+	fill: #790030;
+	color: #790030;
+} */
+
+/* default radio input */
+.radio-container input {
+	cursor: pointer;
+}
+
+.form-row-search {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+}
+
+.search-button {
+	background-color: #790030;
+	width: "100%";
+	color: #ccc;
+	border-radius: 10px;
+	padding: 18px 45px;
+}
+
+/* debugging styles */
+
+/* main custom container that wraps the form */
+.customFormContainer {
+	/* border: 2px solid #000; */
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	/* gap: 0.2rem; */
+}
+
+/* container that wrpas the radio buttons */
+.customRadioContainer {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	/* border: 2px solid salmon; */
+	position: absolute;
+	right: -0px;
+	top: -35px;
+	width: fit-content;
+}
+
+/* Individual radio button container */
+.customRadioInputs {
+	display: flex;
+	align-items: center;
+	/* border: 1px solid red; */
+}
+
+.customRadioInputs > label span {
+	font-size: 12px;
+}
+@media (min-width: 768px) {
+	.customRadioInputs > label span {
+		font-size: 14px;
+	}
+}
+
+/* container for to and from destination inputs */
+.customDestinationInputContainerOne {
+	display: grid;
+	grid-template-columns: 1;
+	gap: 1.2rem;
+	/* margin: 0.3rem 0; */
+	/* border: 2px solid green; */
+	z-index: 999;
+	padding: 0.5rem 1.5rem;
+	flex: 1;
+}
+
+/* tablet screen style adjustments */
+@media (min-width: 768px) {
+	.customDestinationInputContainerOne {
+		grid-template-columns: repeat(4, 1fr);
+	}
+}
+
+/* larger screen style adjustments */
+@media (min-width: 1280px) {
+	.customDestinationInputContainerOne {
+		grid-template-columns: repeat(4, 1fr);
+	}
+}
+
+.customDestinationInputContainerOneAndSearchButtonWrapper {
+	display: flex;
+	width: 100%;
+	/* border: 2px solid rebeccapurple; */
+	height: max-content;
+	/* border-radius: 0 0.3rem 0 0.3rem; */
+	/* overflow: hidden; */
+}
+
+/* passanger and currncy input container */
+.customDestinationInputContainer {
+	/* border: 2px solid #000; */
+	padding: 0 1.5rem 0.5rem;
+	display: gird;
+	grid-template-columns: 1fr;
+	gap: 0.5rem;
+}
+
+/* tablet screen responsiveness */
+@media (min-width: 768px) {
+	/* passanger and currncy input container */
+	.customDestinationInputContainer {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		align-items: center;
+	}
+}
+
+/* tablet screen responsiveness */
+@media (min-width: 1280px) {
+	/* passanger and currncy input container */
+	.customDestinationInputContainer {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		align-items: center;
+	}
+}
+
+/* container for passanger inputs */
+.customPassangersInputContainer {
+	display: flex;
+	gap: 1.2rem;
+	margin: 0.3rem 0;
+	/* border: 2px solid #000; */
+	padding: 0.3rem 0;
+}
+
+/*  to and fro destination inputs */
+.customDestinationInput {
+	flex: 1;
+	/* border: 1px solid green; */
+	z-index: 99;
+}
+
+.customSearchButtonContainer {
+	/* border: 2px solid red; */
+	align-self: flex-end;
+	display: flex;
+}
+
+@media (min-width: 1280px) {
+	.customSearchButtonContainer {
+		margin-bottom: 8px;
+	}
+}
+
+/*  search ticket button */
+.customSearchButton {
+	flex: 1;
+	height: 88px;
+	width: 150px;
+	outline: none;
+	background-color: #71AE4D !important;
+	color: #f8f9fa;
+	font-size: 1.2rem;
+	border: 1px solid transparent;
+	/* border-radius: 0.3rem; */
+	transition: 300ms ease-in-out;
+}
+/* 
+.customSearchButton:hover {
+	background-color: #f8f9fa;
+	border: 1px solid #790030;
+	color: #790030;
+} */
+
+/* custom matgin top */
+.customMT {
+	margin-top: 1rem;
+}
+
+.customOutline {
+	border: 2px solid red;
+}
+
+.customOutlineB {
+	border: 2px solid black;
+}
+
+.customOutlineG {
+	border: 2px solid gray;
+}
+
+/* #input_align{} */
+
+.carousel-indicators {
+	display: none;
+}

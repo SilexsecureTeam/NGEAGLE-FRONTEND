@@ -1,0 +1,38 @@
+.assist-body {
+	position: relative;
+}
+
+.title {
+	position: absolute;
+	top: -25px;
+	z-index: 2;
+	background-color: #71AE4D;
+	padding: 10px;
+	color: white;
+	font-size: 24px;
+	transform: translateX(-50%);
+	left: 50%;
+}
+
+.form-container {
+	display: grid;
+	place-content: center;
+	padding: 100px 0;
+}
+
+.form-container form {
+	background-color: #71AE4D33;
+	padding: 50px 20px 10px;
+	border-radius: 10px;
+	max-width: 600px;
+}
+
+.form-container .input-group {
+	margin: 10px 0;
+}
+
+.form-container form .btn {
+	background-color: #71AE4D !important;
+	color: white !important;
+	padding: 10px 20px;
+}
