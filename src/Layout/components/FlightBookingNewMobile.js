@@ -326,7 +326,7 @@ const FlightBookingNewMobile = () => {
                           onChange={handleDepPortChange}
                           value={departureCode}
                         >
-                          <option>Select Depearture city...</option>
+                          <option>Select Departure city...</option>
                           {portGroups?.map((port, index) => (
                             <Fragment key={index}>
                               {port?.map((s, index) => (
