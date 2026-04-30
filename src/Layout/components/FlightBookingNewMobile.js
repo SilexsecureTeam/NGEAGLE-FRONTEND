@@ -105,23 +105,6 @@ const FlightBookingNewMobile = () => {
     setArrivalCode(e.target.value);
   };
 
-  // const dateToFormattedDate = (date, dateRangePicker) => {
-  //   const format = dateRangePicker[0].getAttribute('data-date-format').toUpperCase()
-  //   return moment(date).format(format)
-  // }
-
-  // // Utility function to get input date format
-  // const inputDateFormat = (dateRangePicker) => {
-  //   if (dateRangePicker.length !== 0) {
-  //     const format = dateRangePicker[0].getAttribute('data-date-format').toUpperCase()
-  //     return format
-  //   }
-  // }
-
-  // const toggleTab = (index) => {
-  //   setTabIndex(index);
-  // };
-
   const onSubmit = (e) => {
     e.preventDefault();
 
