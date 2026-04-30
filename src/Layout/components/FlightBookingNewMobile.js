@@ -18,8 +18,8 @@ const FlightBookingNewMobile = () => {
   const [passangerVisible, setPassangerVisible] = useState(false);
   const [defaultDateValue, setDefaultDateValue] = useState("");
   const [tripType, setTripType] = useState("ONE_WAY");
-  const [departureCode, setDepartureCode] = useState(null);
-  const [arrivalCode, setArrivalCode] = useState(null);
+  const [departureCode, setDepartureCode] = useState("");
+  const [arrivalCode, setArrivalCode] = useState("");
   const [departureDate, setDepartureDate] = useState();
   const [returnDate, setReturnDate] = useState();
   //const [typeDepartureDate, setTypeDepartureDate] = useState("text");
@@ -85,10 +85,10 @@ const FlightBookingNewMobile = () => {
       departureCode &&
       portGroups.map((port) => port?.some((s) => s.code === departureCode))
     ) {
-      // const updatedGroupPort = portGroups.map((port) =>
-      //   port?.filter((s) => s.code !== departureCode)
-      // );
-      // setDestPortGroups(updatedGroupPort);
+      const updatedGroupPort = portGroups.map((port) =>
+        port?.filter((s) => s.code !== departureCode),
+      );
+      setDestPortGroups(updatedGroupPort);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [departureCode]);
@@ -124,6 +124,34 @@ const FlightBookingNewMobile = () => {
 
   const onSubmit = (e) => {
     e.preventDefault();
+
+    // VALIDATION BLOCK
+    if (!departureCode) {
+      alert("Please select a departure city");
+      return;
+    }
+
+    if (!arrivalCode) {
+      alert("Please select an arrival city");
+      return;
+    }
+
+    if (departureCode === arrivalCode) {
+      alert("Departure and arrival cannot be the same");
+      return;
+    }
+
+    if (!departureDate) {
+      alert("Please select a departure date");
+      return;
+    }
+
+    if (tripType === "ROUND_TRIP" && !returnDate) {
+      alert("Please select a return date");
+      return;
+    }
+
+    // Passenger validation
     const transformedObject = passanger.allPasangers.reduce(
       (acc, { type, quantity }) => {
         acc[type.toLowerCase()] = quantity;
@@ -131,27 +159,29 @@ const FlightBookingNewMobile = () => {
       },
       {},
     );
-    const { child, adult, infant } = transformedObject;
 
-    // const departurePort = portGroups.map((port) =>
-    //   port?.find((s) => s.code === departureCode)
-    // );
-    // const arrivalPort = portGroups.map((port) =>
-    //   port?.find((s) => s.code === arrivalCode)
-    // );
+    const { child = 0, adult = 0, infant = 0 } = transformedObject;
 
+    if (adult === 0) {
+      alert("At least one adult is required");
+      return;
+    }
+
+    // ONLY NOW proceed
     let request = new AvailabilityRequest();
     request.lang = "EN";
     request.currency = "NGN";
     request.tripType = tripType;
-    request.depPort = departureCode; //departurePort
-    request.arrPort = arrivalCode; //arrivalPort
+    request.depPort = departureCode;
+    request.arrPort = arrivalCode;
     request.departureDate = formatDate(departureDate);
     request.returnDate = formatDate(returnDate);
+
     let passengerQuantities = [];
     passengerQuantities.push(new PassengerQuantity("ADULT", "", adult));
     passengerQuantities.push(new PassengerQuantity("CHILD", "", child));
     passengerQuantities.push(new PassengerQuantity("INFANT", "", infant));
+
     request.passengerQuantities = passengerQuantities;
 
     api.current.searchV2(request);

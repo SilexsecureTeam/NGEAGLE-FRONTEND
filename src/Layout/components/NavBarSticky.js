@@ -121,6 +121,33 @@ const NavBarSticky = () => {
 
   const onSubmit = (e) => {
     e.preventDefault();
+
+    // VALIDATION BLOCK
+    if (!departureCode) {
+      alert("Please select a departure city");
+      return;
+    }
+
+    if (!arrivalCode) {
+      alert("Please select an arrival city");
+      return;
+    }
+
+    if (departureCode === arrivalCode) {
+      alert("Departure and arrival cannot be the same");
+      return;
+    }
+
+    if (!departureDate) {
+      alert("Please select a departure date");
+      return;
+    }
+
+    if (tripType === "ROUND_TRIP" && !returnDate) {
+      alert("Please select a return date");
+      return;
+    }
+
     const transformedObject = passanger.allPasangers.reduce(
       (acc, { type, quantity }) => {
         acc[type.toLowerCase()] = quantity;
@@ -153,8 +180,6 @@ const NavBarSticky = () => {
     // console.log(request)
     api.current.searchV2(request);
   };
-
-  console.log(passanger.allPasangers);
 
   return (
     <div>
