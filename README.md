@@ -1,70 +1,161 @@
-# Getting Started with Create React App
+# NG Eagle — Airline Website, Booking & Career Portal (Frontend)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Public-facing React frontend for **NG Eagle Limited** (ngeagle.com): flight search/booking flow, hotel/taxi/cafe extras, informational pages, and a separate **Careers portal** (job listings, applications, candidate login).
 
-## Available Scripts
+This README replaces the default Create React App boilerplate that shipped with the repository, with project-specific setup, structure, and configuration notes for the receiving technical team.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+| Layer         | Technology                                                                                        |
+| ------------- | ------------------------------------------------------------------------------------------------- |
+| Framework     | React 18 (Create React App / `react-scripts` 5)                                                   |
+| Routing       | React Router v6                                                                                   |
+| HTTP          | Axios + `axios-hooks`                                                                             |
+| UI / Styling  | MUI (Material UI) + Emotion, Bootstrap 5 + React-Bootstrap, styled-components, Tailwind CSS, Sass |
+| Payments      | Paystack (`react-paystack`)                                                                       |
+| Date/Calendar | MUI X Date Pickers, `daterangepicker` (jQuery-based), `dayjs`, `moment`                           |
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+> The project currently ships **four styling systems** (MUI/Emotion, Bootstrap, styled-components, Tailwind) and **two date libraries** (`dayjs`, `moment`) plus a jQuery-dependent date-range picker alongside MUI's own date picker.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Getting Started
 
-### `npm run build`
+### Prerequisites
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Node.js (LTS recommended) and npm
+- Access to the backend API (see [Configuration](#configuration) — currently hardcoded, not environment-driven)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Install
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+npm install
+```
 
-### `npm run eject`
+### Run locally
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+npm start
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Starts the dev server on **port 3001** (overridden in `package.json`, not CRA's default 3000):
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```json
+"start": "set PORT=3001 && react-scripts start"
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+> Note: `set PORT=3001` is Windows `cmd` syntax. On macOS/Linux this will not set the variable correctly — use `cross-env` or `PORT=3001 react-scripts start` instead if running outside Windows.
 
-## Learn More
+### Build for production
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+npm run build
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Outputs an optimized static build to `/build`, ready to be served by Plesk/Nginx/Apache per the deployment workflow in the project's handover documentation.
 
-### Code Splitting
+### Test
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+npm test
+```
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Configuration
 
-### Making a Progressive Web App
+There is currently **no `.env` file or environment-variable-driven configuration** in this repository. API base URLs are hardcoded directly in source:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+**Main site** — `src/axios.js`
 
-### Advanced Configuration
+```js
+export const url = "https://stock.ngeagle.com/";
+// other commented-out endpoints are left in the file (staging/demo URLs)
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+**Recommended fix:** move both values into `.env` (`REACT_APP_API_URL`, `REACT_APP_CAREER_API_URL`), commit a `.env.example` with placeholder values, and delete the commented-out dead URLs once confirmed unused.
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Project Structure
 
-### `npm run build` fails to minify
+```
+public/                     Static assets, index.html, manifest.json, searchapi.js
+src/
+├── App.js                  Root component / route definitions
+├── axios.js                Main-site API client + base URL
+├── SystemGuard.js          (route/auth guard — verify usage)
+├── PassengersData.js       Passenger form data model
+│
+├── Layout/                 Header, Footer, nav variants, flight booking widgets
+│   └── components/
+│       ├── BookFlight/     Flight search & booking widget
+│       └── NavBar*.js      Multiple nav implementations (see Known Issues)
+│
+├── PLANE/                  Home/landing "Plane" page variant
+│
+├── career/                 Careers portal (separate mini-app)
+│   ├── url.js               Career-portal API base URL
+│   ├── components/          Job cards, header, nav
+│   └── pages/                Jobs listing, job details, applications, login/OTP,
+│                              registration, candidate profile, saved jobs
+│
+├── component/               Shared components: About, ChatBot, Deals & Offers,
+│                              Hotel/Taxi/Dish cards, Luggage/Baggage, Terms &
+│                              Policies, Tourist info, language selector, modal
+│
+├── context/                 FlightBookingContext (React Context state)
+├── hooks/                   useFetchImages, useRequest
+├── pages/                   Route-level pages: About, Contact, Cafe, Deals,
+│                              Hotel Rental, Luggage Policy, News, Taxi Rental,
+│                              Terms, Travel Agent/Corporate Sales, 404
+├── style/                    Page/feature-level CSS
+├── utilities/                 constants.js, utils.js
+└── images/                    Icons, SVGs
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+## Key Modules
+
+- **Flight booking flow** — `Layout/components/BookFlight/`, `Layout/components/FlightBooking*.js`, `context/FlightBookingContext.js`, `PassengersData.js`
+- **Careers portal** — `src/career/` is effectively a self-contained sub-application with its own API base URL, auth pages (login, OTP, registration), and job browsing/application flow
+- **Travel extras** — Hotel, Taxi Rental, Cafe, Deals & Offers, Tourist info components under `component/` and corresponding `pages/`
+- **Support widget** — `component/ChatBot/`
+- **Payments** — Paystack integration via `react-paystack` (search codebase for usage before assuming it's wired into the live booking flow)
+
+---
+
+## Dependency Reference
+
+| Package                                                                     | Purpose                                                                               |
+| --------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `react`, `react-dom`, `react-scripts`                                       | Core framework + CRA build tooling                                                    |
+| `react-router-dom`                                                          | Client-side routing                                                                   |
+| `axios`, `axios-hooks`                                                      | HTTP client and React data-fetching hooks                                             |
+| `@mui/material`, `@mui/icons-material`, `@emotion/react`, `@emotion/styled` | Material UI component library                                                         |
+| `@mui/x-date-pickers`, `dayjs`                                              | Calendar / date picker components                                                     |
+| `daterangepicker`, `jquery`                                                 | Legacy jQuery date-range picker (jQuery is a dependency of this package specifically) |
+| `moment`                                                                    | Legacy date library — overlaps with `dayjs`, candidate for removal                    |
+| `bootstrap`, `react-bootstrap`                                              | Bootstrap CSS framework + React bindings                                              |
+| `styled-components`                                                         | CSS-in-JS (third styling system in use)                                               |
+| `tailwindcss` (dev)                                                         | Utility-first CSS framework (fourth styling system in use)                            |
+| `sass`                                                                      | SCSS compilation                                                                      |
+| `react-paystack`                                                            | Paystack payment integration                                                          |
+| `react-modal`, `sweetalert2`                                                | Modals and alert dialogs                                                              |
+| `react-multi-carousel`, `swiper`                                            | Two separate carousel/slider libraries                                                |
+| `react-icons`                                                               | Icon set                                                                              |
+| `html-to-react`                                                             | Parses raw HTML strings into React elements                                           |
+| `country-state-city`                                                        | Country/state/city datasets for forms                                                 |
+| `web-vitals`                                                                | Performance metric reporting                                                          |
+| `@testing-library/*`                                                        | Testing utilities (dev)                                                               |
+
+---
+
+## Support / Ownership
+
+- **Client:** NG Eagle Limited
+- **Original consultant:** Silex Secure Lab
+- For infrastructure access (Plesk, hosting credentials, backend/CMS repository, database), refer to the separate project handover package — this repository covers the frontend only.
